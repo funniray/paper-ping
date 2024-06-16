@@ -1,6 +1,5 @@
 package com.xdefcon.spigotping;
 
-import com.xdefcon.spigotping.bstats.Metrics;
 import com.xdefcon.spigotping.commands.PingCommand;
 import com.xdefcon.spigotping.commands.PingReloadCommand;
 import com.xdefcon.spigotping.tablist.PingTabList;
@@ -21,7 +20,6 @@ public class SpigotPing extends JavaPlugin {
         this.getCommand("ping").setExecutor(new PingCommand(this));
         this.getCommand("pingreload").setExecutor(new PingReloadCommand(this));
         this.registerTasks();
-        Metrics metrics = new Metrics(this);
     }
 
     @Override
